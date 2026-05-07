@@ -1,5 +1,7 @@
 import { Button, Table } from "@heroui/react";
 import Link from "next/link";
+import DeleteDialog from "./DeleteDialog";
+import { deleteUser } from "@/app/lib/action";
 
 const UsersTable = ({ users }) => {
     // console.log(users);
@@ -28,7 +30,10 @@ const UsersTable = ({ users }) => {
                                     <Link href={`/users/${user._id}`}>
                                         <Button variant="outline">Edit</Button>
                                     </Link>
-                                    <Button variant="danger">Delete</Button>
+                                    <DeleteDialog
+                                        user={user}
+                                        deleteUser={deleteUser}
+                                    ></DeleteDialog>
                                 </Table.Cell>
                             </Table.Row>
                         ))}
