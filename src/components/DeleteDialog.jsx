@@ -3,12 +3,12 @@
 import { AlertDialog, Button } from "@heroui/react";
 import React from "react";
 
-const DeleteDialog = ({ user, deleteUser }) => {
+const DeleteDialog = ({ user, deleteUserAction }) => {
     const { _id, name } = user;
 
     const handleDelete = async () => {
-        console.log(_id);
-        await deleteUser(_id);
+        // console.log(_id);
+        await deleteUserAction(_id);
     };
     return (
         <AlertDialog>

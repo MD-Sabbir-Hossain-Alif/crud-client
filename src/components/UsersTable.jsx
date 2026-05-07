@@ -32,7 +32,7 @@ const UsersTable = ({ users }) => {
                                     </Link>
                                     <DeleteDialog
                                         user={user}
-                                        deleteUser={deleteUser}
+                                        deleteUserAction={deleteUser}
                                     ></DeleteDialog>
                                 </Table.Cell>
                             </Table.Row>
