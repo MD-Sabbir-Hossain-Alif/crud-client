@@ -27,7 +27,7 @@ const UsersTable = ({ users }) => {
                                             Details
                                         </Button>
                                     </Link>
-                                    <Link href={`/users/${user._id}`}>
+                                    <Link href={`/users/${user._id}/edit`}>
                                         <Button variant="outline">Edit</Button>
                                     </Link>
                                     <DeleteDialog
